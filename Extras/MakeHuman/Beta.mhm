@@ -1,0 +1,30 @@
+# Written by MakeHuman 1.1.1
+version v1.1.1
+tags Beta
+camera 0.0 0.0 0.0 0.0 0.0 1.0
+modifier torso/torso-vshape-decr|incr -0.142000
+modifier breast/breast-trans-down|up -0.510000
+modifier macrodetails-universal/Muscle 0.361000
+modifier macrodetails/African 0.014000
+modifier macrodetails-proportions/BodyProportions 0.490000
+modifier torso/torso-scale-horiz-decr|incr 0.252000
+modifier breast/nipple-point-decr|incr -0.292000
+modifier macrodetails/Gender 0.000000
+modifier torso/torso-scale-vert-decr|incr 0.088000
+modifier macrodetails-height/Height 0.646000
+modifier breast/BreastSize 0.592000
+modifier torso/torso-muscle-pectoral-decr|incr -0.184000
+modifier macrodetails/Age 0.422000
+modifier breast/BreastFirmness 1.000000
+modifier macrodetails/Asian 0.259968
+modifier breast/breast-point-decr|incr 0.048000
+modifier head/head-fat-decr|incr -0.238000
+modifier head/head-age-decr|incr -0.564000
+modifier macrodetails/Caucasian 0.726032
+modifier breast/nipple-size-decr|incr -1.000000
+modifier breast/breast-dist-decr|incr -0.306000
+modifier macrodetails-universal/Weight 0.381000
+modifier breast/breast-volume-vert-down|up 1.000000
+clothesHideFaces True
+skinMaterial skins/default.mhmat
+subdivide False
