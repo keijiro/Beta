@@ -414,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713805701}
   - component: {fileID: 713805702}
+  - component: {fileID: 713805703}
   m_Layer: 0
   m_Name: Receiver (Main)
   m_TagString: Untagged
@@ -446,9 +447,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameFilter: Output
-  _targetTexture: {fileID: 8400000, guid: 3794adeb60caafb4a9d6942ecffd9b68, type: 2}
+  _targetTexture: {fileID: 0}
   _targetRenderer: {fileID: 0}
   _targetMaterialProperty: 
+--- !u!114 &713805703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 713805700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4eb3ea8e7da1b46b807f5e22da7954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _receiver: {fileID: 713805702}
+  _extent: {x: 5.3333335, y: 3}
+  _intensity: 1
 --- !u!1 &872873524
 GameObject:
   m_ObjectHideFlags: 0

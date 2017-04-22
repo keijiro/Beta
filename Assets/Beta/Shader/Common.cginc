@@ -20,3 +20,12 @@ float cnoise(float p)
     float d1 = phash(ip + 1) * (fp - 1);
     return lerp(d0, d1, fade(fp));
 }
+
+sampler2D _KodeLife_MainTex;
+float3 _KodeLife_Params;
+
+half3 SampleKodeLifeOutput(float3 wpos)
+{
+    float2 uv = wpos.xy * _KodeLife_Params.xy + 0.5;
+    return tex2D(_KodeLife_MainTex, uv).rgb * _KodeLife_Params.z;
+}
