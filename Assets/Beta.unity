@@ -829,7 +829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _receiver: {fileID: 1163906031}
-  _textColor: {r: 0.33823532, g: 1, b: 0.39756593, a: 1}
+  _textColor: {r: 0, g: 1, b: 0.08965516, a: 1}
+  _noiseAmplitude: 0.22
   _shader: {fileID: 4800000, guid: 44cf34039cc4ece4f9c6f3241db8e5fa, type: 3}
 --- !u!1 &1065903172
 GameObject:

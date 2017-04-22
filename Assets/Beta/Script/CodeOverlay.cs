@@ -16,6 +16,13 @@ namespace Beta
             set { _textColor = value; }
         }
 
+        [SerializeField, Range(0, 1)] float _noiseAmplitude = 0.1f;
+
+        public float noiseAmplitude {
+            get { return _noiseAmplitude; }
+            set { _noiseAmplitude = value; }
+        }
+
         #endregion
 
         #region Private fields
@@ -36,6 +43,7 @@ namespace Beta
         void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
             _material.SetColor("_Color", _textColor);
+            _material.SetFloat("_Noise", _noiseAmplitude * 0.25f);
             _material.SetTexture("_CodeTex", _receiver.receivedTexture);
             Graphics.Blit(source, destination, _material, 0);
         }

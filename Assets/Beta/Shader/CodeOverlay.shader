@@ -14,6 +14,7 @@
     sampler2D _MainTex;
     sampler2D _CodeTex;
     half4 _Color;
+    half _Noise;
 
     float rand(float2 uv)
     {
@@ -49,7 +50,7 @@
         // Make noise with sparse slow noise x dense fast noise.
         float d1 = gnoise(y - t);
         float d2 = gnoise(y * 200 - t * 100);
-        float2 offs = float2((d1 * d2) * 0.1, 0);
+        float2 offs = float2((d1 * d2) * _Noise, 0);
 
         // Anti-aliased scrolling canlines.
         half scan = saturate(abs(0.5 - frac(i.pos.y / 4 + t * 77)) * 4 - 0.5);
