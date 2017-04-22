@@ -3,7 +3,7 @@ using Klak.Spout;
 
 namespace Beta
 {
-    public class CodeOverlay : MonoBehaviour
+    public class KodeOverlay : MonoBehaviour
     {
         #region Editable properties
 
@@ -44,7 +44,7 @@ namespace Beta
         {
             _material.SetColor("_Color", _textColor);
             _material.SetFloat("_Noise", _noiseAmplitude * 0.25f);
-            _material.SetTexture("_CodeTex", _receiver.receivedTexture);
+            _material.SetTexture("_KodeTex", _receiver.receivedTexture);
             Graphics.Blit(source, destination, _material, 0);
         }
 
