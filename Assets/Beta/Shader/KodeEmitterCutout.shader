@@ -14,7 +14,7 @@ Shader "Beta/KodeEmitter Cutout"
 
         CGPROGRAM
 
-        #pragma surface surf Standard alphatest:_Cutoff
+        #pragma surface surf Standard alphatest:_Cutoff addshadow nolightmap
         #pragma target 3.0
 
         #include "Common.cginc"
@@ -37,7 +37,7 @@ Shader "Beta/KodeEmitter Cutout"
             o.Smoothness = _Smoothness;
             o.Normal = float3(0, 0, IN.vface < 0 ? -1 : 1);
             o.Emission = SampleKodeLifeOutput(IN.worldPos) * _Emission;
-            o.Alpha = max(max(o.Emission.r, o.Emission.g), o.Emission.b);
+            o.Alpha = max(max(max(o.Emission.r, o.Emission.g), o.Emission.b), 0.01);
         }
 
         ENDCG

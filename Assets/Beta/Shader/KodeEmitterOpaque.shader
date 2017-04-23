@@ -13,7 +13,7 @@
 
         CGPROGRAM
 
-        #pragma surface surf Standard
+        #pragma surface surf Standard nolightmap
         #pragma target 3.0
 
         #include "Common.cginc"
