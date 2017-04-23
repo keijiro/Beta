@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Klak.Math;
 
-namespace Chimera
+namespace Beta
 {
     public class Puppet : MonoBehaviour
     {

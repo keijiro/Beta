@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0029c0e4a926f9540b9be1c49020eaec, type: 3}
-  m_Name: Template
+  m_Name: Swarm
   m_EditorClassIdentifier: 
   _lineCount: 200
   _historyLength: 165
