@@ -34,8 +34,8 @@
         half4 c2 = tex2D(_KodeTex, i.uv + offs);
 
         // Apply effects to c2.
-        half br = saturate(dot(saturate(c2.rgb - 0.1), _Color.a));
-        half3 rgb = _Color.rgb * br * scan;
+        half br = (max(max(c2.rgb.r, c2.rgb.g), c2.rgb.b) - 0.1) / 0.7;
+        half3 rgb = _Color.rgb * saturate(br) * scan;
 
         return half4(c1.rgb + rgb, c1.a);
     }
