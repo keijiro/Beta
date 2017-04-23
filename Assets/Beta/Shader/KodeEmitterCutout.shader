@@ -32,12 +32,13 @@ Shader "Beta/KodeEmitter Cutout"
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
+            half3 kode = SampleKodeLifeOutput(IN.worldPos);
             o.Albedo = _Color.rgb;
             o.Metallic = _Metallic;
             o.Smoothness = _Smoothness;
             o.Normal = float3(0, 0, IN.vface < 0 ? -1 : 1);
-            o.Emission = SampleKodeLifeOutput(IN.worldPos) * _Emission;
-            o.Alpha = max(max(max(o.Emission.r, o.Emission.g), o.Emission.b), 0.01);
+            o.Emission = kode * _Emission;
+            o.Alpha = max(max(max(kode.r, kode.g), kode.b), 0.01);
         }
 
         ENDCG
