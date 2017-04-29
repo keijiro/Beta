@@ -4,6 +4,12 @@ Beta
 **Beta** is a program used in the live coding session at Channel 16, which was
 held at Roppongi SuperDeluxe on 28th April 2017.
 
+![gif](http://i.imgur.com/NwETpDh.gif)
+![gif](http://i.imgur.com/KpEIUPt.gif)
+![gif](http://i.imgur.com/E6mq7MW.gif)
+
+*Videos posted by [@tokyomax], [@murakamikunkun] and [@Ivneuron]*
+
 In this session, I used [KodeLife] for generating abstract audio-reacting
 visuals in a live coding fashion. These visuals are send to Unity with using
 the [Spout] protocol and projected into the Unity scene.
@@ -11,6 +17,9 @@ the [Spout] protocol and projected into the Unity scene.
 In this way, I tried to harmonize the unpredictable outputs of live coding and
 the pre-composed high quality visuals.
 
+[@tokyomax]: https://twitter.com/tokyomax/status/857957410631176193
+[@murakamikunkun]: https://twitter.com/murakamikunkun/status/857999761923637248
+[@Ivneuron]: https://twitter.com/Ivneuron/status/857959050499153922
 [KodeLife]: https://hexler.net/software/kodelife
 [Spout]: http://spout.zeal.co/
 
