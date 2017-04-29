@@ -17,8 +17,8 @@ In this session, I used [KodeLife] to generate abstract audio-reacting visuals
 in a live coding fashion. These visuals are send to Unity via [Spout] and
 projected into the Unity scene.
 
-In this way, I tried to harmonize the unpredictable outputs of live coding and
-the pre-composed scene.
+In this way, I tried to harmonize unpredictable outputs of live coding and the
+pre-composed high quality assets and effects.
 
 [@tokyomax]: https://twitter.com/tokyomax/status/857957410631176193
 [@murakamikunkun]: https://twitter.com/murakamikunkun/status/857999761923637248
