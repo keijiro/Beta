@@ -1,5 +1,10 @@
 #include "UnityCG.cginc"
 
+float uvrand(float2 uv)
+{
+    return frac(sin(dot(uv, float2(12.9898, 78.233))) * 43758.5453);
+}
+
 float fade(float x)
 {
     return x * x * x * (x * (x * 6 - 15) + 10);

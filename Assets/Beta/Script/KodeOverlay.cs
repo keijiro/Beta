@@ -8,19 +8,17 @@ namespace Beta
         #region Editable properties
 
         [SerializeField] SpoutReceiver _receiver;
-
-        [SerializeField] Color _textColor = Color.green;
+        [SerializeField, ColorUsage(false)] Color _textColor = Color.green;
+        [SerializeField, Range(0, 1)] float _renderOpacity = 1;
 
         public Color textColor {
             get { return _textColor; }
             set { _textColor = value; }
         }
 
-        [SerializeField, Range(0, 1)] float _noiseAmplitude = 0.1f;
-
-        public float noiseAmplitude {
-            get { return _noiseAmplitude; }
-            set { _noiseAmplitude = value; }
+        public float renderOpacity {
+            get { return _renderOpacity; }
+            set { _renderOpacity = value; }
         }
 
         #endregion
@@ -40,12 +38,16 @@ namespace Beta
             _material = new Material(_shader);
         }
 
-        void OnRenderImage(RenderTexture source, RenderTexture destination)
+        void OnDestroy()
         {
-            _material.SetColor("_Color", _textColor);
-            _material.SetFloat("_Noise", _noiseAmplitude * 0.25f);
-            _material.SetTexture("_KodeTex", _receiver.receivedTexture);
-            Graphics.Blit(source, destination, _material, 0);
+            Destroy(_material);
+        }
+
+        void OnPostRender()
+        {
+            _material.SetColor("_TextColor", _textColor);
+            _material.SetFloat("_RenderOpacity", _renderOpacity);
+            Graphics.Blit(_receiver.receivedTexture, _material, 0);
         }
 
         #endregion
