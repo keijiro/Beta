@@ -13,20 +13,23 @@
     sampler2D _MainTex;
     half3 _TextColor;
     half _RenderOpacity;
+    half _RenderThreshold;
 
     half4 frag(v2f_img i) : SV_Target
     {
         const half code_bg = 0.089;
 
-        half3 rgb = tex2D(_MainTex, i.uv).rgb;
-        rgb = (rgb - code_bg) / (1 - code_bg) * 1.25;
-        rgb = _TextColor * saturate(max(max(rgb.r, rgb.g), rgb.b));
+        half3 code = tex2D(_MainTex, i.uv).rgb;
+        code = (code - code_bg) / (1 - code_bg) * 1.25;
+        code = _TextColor * saturate(max(max(code.r, code.g), code.b));
 
-        rgb += tex2D(_KodeLife_MainTex, i.uv).rgb * _RenderOpacity;
+        half3 render = tex2D(_KodeLife_MainTex, i.uv).rgb;
+        render = saturate(render - _RenderThreshold) / (1 - _RenderThreshold);
+        render *= _RenderOpacity;
 
-        rgb += (uvrand(i.uv + frac(_Time.y)) - 0.5) / 255;
+        half dither = (uvrand(i.uv + frac(_Time.y)) - 0.5) / 255;
 
-        return half4(rgb, 1);
+        return half4(code + render + dither, 1);
     }
 
     ENDCG

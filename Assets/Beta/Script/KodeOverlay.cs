@@ -10,6 +10,7 @@ namespace Beta
         [SerializeField] SpoutReceiver _receiver;
         [SerializeField, ColorUsage(false)] Color _textColor = Color.green;
         [SerializeField, Range(0, 1)] float _renderOpacity = 1;
+        [SerializeField, Range(0, 0.99f)] float _renderThreshold = 0;
 
         public Color textColor {
             get { return _textColor; }
@@ -19,6 +20,11 @@ namespace Beta
         public float renderOpacity {
             get { return _renderOpacity; }
             set { _renderOpacity = value; }
+        }
+
+        public float renderThreshold {
+            get { return _renderThreshold; }
+            set { _renderThreshold = value; }
         }
 
         #endregion
@@ -47,6 +53,7 @@ namespace Beta
         {
             _material.SetColor("_TextColor", _textColor);
             _material.SetFloat("_RenderOpacity", _renderOpacity);
+            _material.SetFloat("_RenderThreshold", _renderThreshold);
             Graphics.Blit(_receiver.receivedTexture, _material, 0);
         }
 
