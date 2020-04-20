@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wiringNodePosition: {x: 240, y: -480}
   _target: {fileID: 985864392}
-  _propertyName: fov
+  _propertyName: fieldOfView
 --- !u!1 &687999439
 GameObject:
   m_ObjectHideFlags: 0
